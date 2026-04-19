@@ -5,8 +5,6 @@ from jobs_request import get_jobs
 app = Flask(__name__)
 
 
-# app.config['SECRET_KEY'] = ''
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -14,10 +12,7 @@ def index():
     return render_template('index.html', **context)
 
 
-# def get_jobs(session):
-#     for user in session.query(User)
-
 if __name__ == '__main__':
     global_init('db/journal.sqlite')
     session = create_session()
-    app.run(port=8080, host='127.0.0.1', debug=True)
+    app.run(port=8080, host='127.0.0.1', debug=False)
