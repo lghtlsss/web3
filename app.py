@@ -13,6 +13,6 @@ def index():
 
 
 if __name__ == '__main__':
-    global_init('db/journal.sqlite')
+    global_init('db/mars.sqlite')
     session = create_session()
     app.run(port=8080, host='127.0.0.1', debug=False)
